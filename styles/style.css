@@ -1,0 +1,95 @@
+/* line 13, style.scss */
+html {
+  box-sizing: border-box; }
+
+/* line 16, style.scss */
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+/* line 21, style.scss */
+* {
+  margin: 0; }
+
+/* line 24, style.scss */
+body {
+  font-family: "Public Sans", sans-serif; }
+
+/* line 28, style.scss */
+.nav {
+  position: fixed;
+  background-color: white;
+  height: 5em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; }
+
+/* line 40, style.scss */
+.nav__logo {
+  height: max-content; }
+
+/* line 44, style.scss */
+.nav__tags {
+  display: flex;
+  flex-direction: row; }
+  /* line 48, style.scss */
+  .nav__tags p {
+    color: #9698a6;
+    padding: 1em;
+    font-weight: 400;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden; }
+    /* line 59, style.scss */
+    .nav__tags p:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      background: #31d35c;
+      height: 4px;
+      -webkit-transition-property: right;
+      transition-property: right;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out; }
+    /* line 75, style.scss */
+    .nav__tags p:hover:before {
+      right: 0; }
+
+/* line 80, style.scss */
+.nav__button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background: linear-gradient(to right, #31d35c, #2bb7da); }
+  /* line 91, style.scss */
+  .nav__button:hover {
+    opacity: 0.8; }
+
+/* line 96, style.scss */
+main {
+  display: none; }
+
+/* line 100, style.scss */
+.attribution {
+  display: none;
+  font-size: 11px;
+  text-align: center; }
+
+/* line 105, style.scss */
+.attribution a {
+  color: #3e52a3; }
+
+/*# sourceMappingURL=style.css.map */

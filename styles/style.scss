@@ -1,0 +1,107 @@
+// Primary
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen: hsl(136, 65%, 51%);
+$briightCyan: hsl(192, 70%, 51%);
+
+// Neutral
+$grayishBlue: hsl(233, 8%, 62%);
+$lightGrayishBlue: hsl(220, 16%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+
+// General
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+* {
+    margin: 0;
+}
+body {
+    font-family: "Public Sans", sans-serif;
+}
+// Navbar
+.nav {
+    position: fixed;
+    background-color: $white;
+    height: 5em;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav__logo {
+    height: max-content;
+}
+
+.nav__tags {
+    display: flex;
+    flex-direction: row;
+
+    p {
+        color: $grayishBlue;
+        padding: 1em;
+        font-weight: 400;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        position: relative;
+        overflow: hidden;
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 100%;
+            bottom: 0;
+            background: $limeGreen;
+            height: 4px;
+            -webkit-transition-property: right;
+            transition-property: right;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+        &:hover:before {
+            right: 0;
+        }
+    }
+}
+.nav__button {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 50px;
+    color: $white;
+    background: linear-gradient(
+        to right,
+        hsl(136, 65%, 51%),
+        hsl(192, 70%, 51%)
+    );
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+main {
+    display: none;
+}
+// attribution
+.attribution {
+    display: none;
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
