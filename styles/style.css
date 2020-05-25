@@ -14,28 +14,30 @@ html {
 
 /* line 24, style.scss */
 body {
-  font-family: "Public Sans", sans-serif; }
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px; }
 
-/* line 28, style.scss */
+/* line 29, style.scss */
 .nav {
-  position: fixed;
+  position: relative;
   background-color: white;
   height: 5em;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-around;
+  z-index: 3; }
 
-/* line 40, style.scss */
+/* line 43, style.scss */
 .nav__logo {
   height: max-content; }
 
-/* line 44, style.scss */
+/* line 47, style.scss */
 .nav__tags {
   display: flex;
   flex-direction: row; }
-  /* line 48, style.scss */
+  /* line 51, style.scss */
   .nav__tags p {
     color: #9698a6;
     padding: 1em;
@@ -47,7 +49,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     position: relative;
     overflow: hidden; }
-    /* line 59, style.scss */
+    /* line 62, style.scss */
     .nav__tags p:before {
       content: "";
       position: absolute;
@@ -63,32 +65,72 @@ body {
       transition-duration: 0.3s;
       -webkit-transition-timing-function: ease-out;
       transition-timing-function: ease-out; }
-    /* line 75, style.scss */
+    /* line 78, style.scss */
     .nav__tags p:hover:before {
       right: 0; }
 
-/* line 80, style.scss */
+/* line 83, style.scss */
 .nav__button {
   padding: 1em 2em;
   border: none;
   border-radius: 50px;
   color: white;
   background: linear-gradient(to right, #31d35c, #2bb7da); }
-  /* line 91, style.scss */
+  /* line 94, style.scss */
   .nav__button:hover {
     opacity: 0.8; }
 
-/* line 96, style.scss */
+/* line 99, style.scss */
 main {
   display: none; }
 
-/* line 100, style.scss */
+/* line 103, style.scss */
+.div__hero-section {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 72.5vh;
+  background-image: url("../images/bg-intro-desktop.svg");
+  background-size: 1000px;
+  background-repeat: no-repeat;
+  background-position: top -200px right -200px; }
+
+/* line 115, style.scss */
+.div__description {
+  width: 50%;
+  padding: 8em; }
+  /* line 119, style.scss */
+  .div__description .div__heading {
+    padding-bottom: 1em; }
+    /* line 121, style.scss */
+    .div__description .div__heading h1 {
+      padding: 0.1em; }
+  /* line 126, style.scss */
+  .div__description p {
+    line-height: 30px;
+    padding-bottom: 2em;
+    color: #fafafa; }
+
+/* line 132, style.scss */
+.div__svg {
+  position: absolute;
+  top: -40px;
+  right: -130px;
+  z-index: 1; }
+
+/* line 139, style.scss */
+.div__easybank {
+  background-color: #ff0;
+  height: 100vh; }
+
+/* line 144, style.scss */
 .attribution {
   display: none;
   font-size: 11px;
   text-align: center; }
 
-/* line 105, style.scss */
+/* line 149, style.scss */
 .attribution a {
   color: #3e52a3; }
 
