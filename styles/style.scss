@@ -24,6 +24,7 @@ html {
 body {
     font-family: "Public Sans", sans-serif;
     font-size: 18px;
+    font-weight: 300;
 }
 // Navbar
 .nav {
@@ -99,45 +100,48 @@ body {
 main {
     display: none;
 }
-
+// hero section
 .div__hero-section {
     background: #fff;
     // padding: 2em 0 0 2em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    height: 72.5vh;
+    height: 80vh;
     background-image: url("../images/bg-intro-desktop.svg");
-    background-size: 1000px;
+    background-size: 1100px;
     background-repeat: no-repeat;
-    background-position: top -200px right -200px;
+    background-position: top -200px right -280px;
 }
 .div__description {
     width: 50%;
-    padding: 8em;
+    padding: 7em 8em;
 
     .div__heading {
         padding-bottom: 1em;
         h1 {
+            font-size: 3em;
+            font-weight: 400;
             padding: 0.1em;
         }
     }
 
-    p {
+    .div__p {
         line-height: 30px;
         padding-bottom: 2em;
-        color: $veryLightGray;
+        color: $grayishBlue;
+        text-align: left;
     }
 }
 .div__svg {
     position: absolute;
-    top: -40px;
+    top: -35px;
     right: -130px;
     z-index: 1;
 }
-
+// why choose easybank
 .div__easybank {
-    background-color: #ff0;
+    background-color: $lightGrayishBlue;
     height: 100vh;
 }
 // attribution
