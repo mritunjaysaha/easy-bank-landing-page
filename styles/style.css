@@ -221,13 +221,74 @@ main {
 
 .article__img {
   width: 15em;
+  height: 10em;
   z-index: 0;
 }
 
+.div__about__us {
+  background-color: #2d314d;
+  padding: 3em 8em 2em 8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.div__about__us .about__us__left {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.div__about__us .about__us__left .logo {
+  padding-bottom: 2.5em;
+}
+
+.div__about__us .about__us__left .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.div__about__us .about__us__left p {
+  font-size: 14px;
+  color: #f3f4f6;
+  line-height: 2.25em;
+}
+
+.div__about__us .about__us__right {
+  width: 50%;
+  text-align: right;
+}
+
+.div__about__us .about__us__right p {
+  font-size: 12px;
+  color: #9698a6;
+  padding: 2em 0;
+}
+
 .attribution {
-  display: none;
-  font-size: 11px;
+  font-size: 14px;
   text-align: center;
+  padding: 1em;
 }
 
 .attribution a {

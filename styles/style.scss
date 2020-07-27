@@ -208,13 +208,53 @@ main {
 
 .article__img {
     width: 15em;
+    height: 10em;
     z-index: 0;
 }
+
+.div__about__us {
+    background-color: $darkBlue;
+    padding: 3em $left-padding 2em $left-padding;
+    display: flex;
+    flex-direction: row;
+
+    .about__us__left {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .logo {
+            padding-bottom: 2.5em;
+        }
+        .icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        p {
+            font-size: 14px;
+            color: $lightGrayishBlue;
+            line-height: 2.25em;
+        }
+    }
+    .about__us__right {
+        width: 50%;
+        text-align: right;
+        p {
+            font-size: 12px;
+            color: $grayishBlue;
+            padding: 2em 0;
+        }
+    }
+}
+
 // attribution
 .attribution {
-    display: none;
-    font-size: 11px;
+    font-size: 14px;
     text-align: center;
+    padding: 1em;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
