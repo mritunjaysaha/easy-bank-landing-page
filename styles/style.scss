@@ -9,6 +9,8 @@ $lightGrayishBlue: hsl(220, 16%, 96%);
 $veryLightGray: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
 
+// padding left
+$left-padding: 8em;
 // General
 html {
     box-sizing: border-box;
@@ -17,14 +19,14 @@ html {
 *::after,
 *::before {
     box-sizing: inherit;
-}
-* {
     margin: 0;
 }
+
 body {
     font-family: "Public Sans", sans-serif;
     font-size: 18px;
     font-weight: 300;
+    overflow-x: hidden;
 }
 // Navbar
 .nav {
@@ -115,7 +117,7 @@ main {
 }
 .div__description {
     width: 50%;
-    padding: 7em 8em;
+    padding: 7em $left-padding;
 
     .div__heading {
         padding-bottom: 1em;
@@ -142,7 +144,40 @@ main {
 // why choose easybank
 .div__easybank {
     background-color: $lightGrayishBlue;
-    height: 100vh;
+    padding: 4em $left-padding;
+
+    .easybank__heading {
+        h1 {
+            font-weight: 400;
+        }
+
+        p {
+            width: 38em;
+            padding: 1em 0 4em 0;
+            color: $grayishBlue;
+            line-height: 1.5em;
+        }
+    }
+}
+
+// Easybank cards
+.easybank__cards__container {
+    display: flex;
+    flex-direction: row;
+
+    .cards {
+        margin: 1em;
+
+        h3 {
+            font-weight: 400;
+            padding: 1em 0;
+        }
+        p {
+            font-size: 15px;
+            color: $grayishBlue;
+            line-height: 1.5em;
+        }
+    }
 }
 // attribution
 .attribution {
