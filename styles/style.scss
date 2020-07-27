@@ -20,13 +20,13 @@ html {
 *::before {
     box-sizing: inherit;
     margin: 0;
+    overflow-x: hidden;
 }
 
 body {
     font-family: "Public Sans", sans-serif;
     font-size: 18px;
     font-weight: 300;
-    overflow-x: hidden;
 }
 // Navbar
 .nav {
@@ -99,13 +99,9 @@ body {
     }
 }
 
-main {
-    display: none;
-}
 // hero section
 .div__hero-section {
     background: $veryLightGray;
-    // padding: 2em 0 0 2em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -258,4 +254,126 @@ main {
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 992px) {
+    .div__easybank,
+    .div__latest__article,
+    .div__description,
+    .div__about__us {
+        padding: 0;
+    }
+    .div__hero-section {
+        background-image: url(../images/bg-intro-mobile.svg);
+        background-size: contain;
+        background-position: top -60px right 0px;
+        flex-direction: column;
+        height: 100vh;
+        .nav__button {
+            margin-bottom: 2em;
+            margin: 0 auto;
+            width: max-content;
+        }
+    }
+
+    .div__description {
+        width: 100%;
+        position: relative;
+        top: 40%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .div__heading {
+            padding-top: 2em;
+            h1 {
+                font-size: 2em;
+            }
+        }
+
+        .div__p {
+            font-size: 14px;
+            line-height: 30px;
+            padding: 0 1em 1em 1em;
+            color: $grayishBlue;
+            text-align: center;
+        }
+    }
+    .div__svg {
+        left: 0.6em;
+        top: -24px;
+        img {
+            height: 22em;
+        }
+    }
+    .div__easybank {
+        padding: 8em 0;
+        text-align: center;
+        .easybank__heading {
+            width: 100%;
+
+            p {
+                font-size: 16px;
+                width: 100%;
+                padding: 1em 1.5;
+            }
+        }
+    }
+    .easybank__cards__container {
+        flex-direction: column;
+        text-align: center;
+        .cards {
+            margin: 0 auto;
+            padding: 0.5em 1em;
+        }
+    }
+
+    .div__latest__article {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        h1 {
+            padding-top: 1em;
+        }
+        .article__img {
+            width: 100%;
+        }
+        .cards {
+            width: 90%;
+            margin: 0;
+            padding: 0;
+            background-color: $white;
+            text-align: left;
+            margin: 1em 0;
+        }
+
+        .cards-content {
+            padding: 0;
+        }
+    }
+
+    .div__about__us {
+        flex-direction: column;
+        width: 90%;
+
+        .about__us__left,
+        .about__us__right {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .logo {
+            padding: 1.5em 0 !important;
+        }
+        .icons {
+            padding-bottom: 1em;
+        }
+        .nav__button {
+            margin: 1em 0;
+        }
+    }
+
+    .attribution {
+        display: none;
+    }
 }

@@ -9,13 +9,13 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
   margin: 0;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
   font-weight: 300;
-  overflow-x: hidden;
 }
 
 .nav {
@@ -99,10 +99,6 @@ body {
 
 .nav__button:hover {
   opacity: 0.8;
-}
-
-main {
-  display: none;
 }
 
 .div__hero-section {
@@ -293,5 +289,140 @@ main {
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media screen and (max-width: 992px) {
+  .div__easybank,
+  .div__latest__article,
+  .div__description,
+  .div__about__us {
+    padding: 0;
+  }
+  .div__hero-section {
+    background-image: url(../images/bg-intro-mobile.svg);
+    background-size: contain;
+    background-position: top -60px right 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100vh;
+  }
+  .div__hero-section .nav__button {
+    margin-bottom: 2em;
+    margin: 0 auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .div__description {
+    width: 100%;
+    position: relative;
+    top: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .div__description .div__heading {
+    padding-top: 2em;
+  }
+  .div__description .div__heading h1 {
+    font-size: 2em;
+  }
+  .div__description .div__p {
+    font-size: 14px;
+    line-height: 30px;
+    padding: 0 1em 1em 1em;
+    color: #9698a6;
+    text-align: center;
+  }
+  .div__svg {
+    left: 0.6em;
+    top: -24px;
+  }
+  .div__svg img {
+    height: 22em;
+  }
+  .div__easybank {
+    padding: 8em 0;
+    text-align: center;
+  }
+  .div__easybank .easybank__heading {
+    width: 100%;
+  }
+  .div__easybank .easybank__heading p {
+    font-size: 16px;
+    width: 100%;
+    padding: 1em 1.5;
+  }
+  .easybank__cards__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+  .easybank__cards__container .cards {
+    margin: 0 auto;
+    padding: 0.5em 1em;
+  }
+  .div__latest__article {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .div__latest__article h1 {
+    padding-top: 1em;
+  }
+  .div__latest__article .article__img {
+    width: 100%;
+  }
+  .div__latest__article .cards {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    text-align: left;
+    margin: 1em 0;
+  }
+  .div__latest__article .cards-content {
+    padding: 0;
+  }
+  .div__about__us {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90%;
+  }
+  .div__about__us .about__us__left,
+  .div__about__us .about__us__right {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .div__about__us .logo {
+    padding: 1.5em 0 !important;
+  }
+  .div__about__us .icons {
+    padding-bottom: 1em;
+  }
+  .div__about__us .nav__button {
+    margin: 1em 0;
+  }
+  .attribution {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
