@@ -135,16 +135,36 @@ body {
     }
 }
 .div__svg {
+    display: none;
+    margin: 0 auto;
+}
+.div__svg > img {
     position: absolute;
-    top: -35px;
-    right: -130px;
+
     z-index: 1;
 }
 // why choose easybank
 .div__easybank {
     background: $lightGrayishBlue;
     padding: 6em $left-padding;
+    .easybank__cards__container {
+        display: flex;
+        flex-direction: row;
 
+        .cards {
+            margin: 1em 1em 1em 0;
+
+            h3 {
+                font-weight: 400;
+                padding: 1em 0;
+            }
+            p {
+                font-size: 15px;
+                color: $grayishBlue;
+                line-height: 1.5em;
+            }
+        }
+    }
     .easybank__heading {
         h1 {
             font-weight: 400;
@@ -160,24 +180,6 @@ body {
 }
 
 // Easybank cards
-.easybank__cards__container {
-    display: flex;
-    flex-direction: row;
-
-    .cards {
-        margin: 1em 1em 1em 0;
-
-        h3 {
-            font-weight: 400;
-            padding: 1em 0;
-        }
-        p {
-            font-size: 15px;
-            color: $grayishBlue;
-            line-height: 1.5em;
-        }
-    }
-}
 
 // lastest article section
 .div__latest__article {
@@ -188,14 +190,21 @@ body {
         padding-bottom: 1em;
     }
 
+    .easybank__cards__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
     .cards {
-        width: 15em;
-        background-color: $white;
+        margin: 0 0.5em;
         border-radius: 5px;
-        margin-right: 3em;
-        z-index: 10;
     }
 
+    .article__img {
+        width: 15em;
+        height: 10em;
+        z-index: 0;
+    }
     .cards-content {
         padding: 1em;
 
@@ -203,12 +212,6 @@ body {
             padding: 0.2em 0;
         }
     }
-}
-
-.article__img {
-    width: 15em;
-    height: 10em;
-    z-index: 0;
 }
 
 .div__about__us {
@@ -379,43 +382,46 @@ body {
                 padding: 1em 1.5;
             }
         }
-    }
-    .easybank__cards__container {
-        flex-direction: column;
-        text-align: center;
-        .cards {
-            margin: 0 auto;
-            padding: 0.5em 1em;
+        .easybank__cards__container {
+            flex-direction: column;
+            text-align: center;
+            .cards {
+                margin: 0 auto;
+                padding: 0.5em 1em;
+            }
         }
     }
 
     .div__latest__article {
-        text-align: center;
-        width: 90%;
-        margin: 0 auto;
+        background-color: $veryLightGray;
+        width: 100%;
         h1 {
-            padding-top: 1em;
-        }
-        .article__img {
-            width: 100%;
-        }
-        .cards {
-            width: 90%;
-            margin: 0;
-            padding: 0;
-            background-color: $white;
-            text-align: left;
-            margin: 1em 0;
+            font-weight: 400;
+            text-align: center;
+            padding: 1em 0;
         }
 
-        .cards-content {
-            padding: 0;
+        .easybank__cards__container {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: 0 auto;
+            .cards {
+                background-color: #fff;
+                border-radius: 5px;
+                .article__img {
+                    height: 10em;
+                    width: fit-content;
+                }
+                .cards-content {
+                    padding: 1em;
+                }
+            }
         }
     }
-
     .div__about__us {
         flex-direction: column;
-        width: 90%;
+        width: 100%;
 
         .about__us__left,
         .about__us__right {
