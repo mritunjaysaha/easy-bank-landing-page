@@ -18,10 +18,6 @@ body {
   font-weight: 300;
 }
 
-.mobile {
-  display: none;
-}
-
 .nav {
   position: relative;
   background-color: white;
@@ -103,6 +99,10 @@ body {
 
 .nav__button:hover {
   opacity: 0.8;
+}
+
+.mobile {
+  display: none;
 }
 
 .div__hero-section {
@@ -316,9 +316,39 @@ body {
   .nav .nav__logo {
     padding: 1em 0 1em 1em;
   }
+  .mobile__nav__tags {
+    position: absolute;
+    z-index: 100;
+    background-color: #f00;
+    width: 100%;
+    height: 100vh;
+  }
+  .mobile__nav__tags .nav__tags {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: white;
+    margin: 1em;
+    border-radius: 5px;
+    padding: 1em 0;
+  }
+  .mobile__nav__tags .nav__tags p {
+    color: #2d314d;
+    line-height: 0.5em;
+  }
+  .mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .menu {
     position: absolute;
     right: 2em;
+    top: 1em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -326,15 +356,25 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 2em;
+    height: 1.5em;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .disable {
+    display: none;
+  }
+  .close__btn {
+    background-image: url(../images/icon-close.svg);
+    background-size: 2em;
+    background-repeat: no-repeat;
   }
   .menu__top,
   .menu__middle,
   .menu__bottom {
     height: 2px;
-    width: 2em;
+    width: 1.5em;
     background-color: #2d314d;
-    margin: 4px 0;
   }
   .div__hero-section {
     background-image: url(../images/bg-intro-mobile.svg);
