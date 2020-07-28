@@ -18,6 +18,10 @@ body {
   font-weight: 300;
 }
 
+.mobile {
+  display: none;
+}
+
 .nav {
   position: relative;
   background-color: white;
@@ -292,11 +296,45 @@ body {
 }
 
 @media screen and (max-width: 992px) {
+  .desktop {
+    display: none;
+  }
   .div__easybank,
   .div__latest__article,
   .div__description,
   .div__about__us {
     padding: 0;
+  }
+  .nav {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .nav .nav__logo {
+    padding: 1em 0 1em 1em;
+  }
+  .menu {
+    position: absolute;
+    right: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 2em;
+  }
+  .menu__top,
+  .menu__middle,
+  .menu__bottom {
+    height: 2px;
+    width: 2em;
+    background-color: #2d314d;
+    margin: 4px 0;
   }
   .div__hero-section {
     background-image: url(../images/bg-intro-mobile.svg);

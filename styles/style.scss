@@ -28,6 +28,10 @@ body {
     font-size: 18px;
     font-weight: 300;
 }
+
+.mobile {
+    display: none;
+}
 // Navbar
 .nav {
     position: relative;
@@ -257,12 +261,38 @@ body {
 }
 
 @media screen and (max-width: 992px) {
+    .desktop {
+        display: none;
+    }
     .div__easybank,
     .div__latest__article,
     .div__description,
     .div__about__us {
         padding: 0;
     }
+    .nav {
+        height: max-content;
+        justify-content: left;
+        .nav__logo {
+            padding: 1em 0 1em 1em;
+        }
+    }
+    .menu {
+        position: absolute;
+        right: 2em;
+        display: flex;
+        flex-direction: column;
+        height: 2em;
+    }
+    .menu__top,
+    .menu__middle,
+    .menu__bottom {
+        height: 2px;
+        width: 2em;
+        background-color: $darkBlue;
+        margin: 4px 0;
+    }
+
     .div__hero-section {
         background-image: url(../images/bg-intro-mobile.svg);
         background-size: contain;
