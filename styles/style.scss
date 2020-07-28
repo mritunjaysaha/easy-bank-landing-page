@@ -84,6 +84,11 @@ body {
         &:hover:before {
             right: 0;
         }
+
+        a {
+            text-decoration: none;
+            color: $grayishBlue;
+        }
     }
 }
 .nav__button {
