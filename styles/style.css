@@ -118,9 +118,19 @@ body {
       flex-wrap: wrap;
   height: 80vh;
   background-image: url("../images/bg-intro-desktop.svg");
-  background-size: 1100px;
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: top -200px right -280px;
+  background-position: top -300px right -600px;
+}
+
+.div__hero-section .div__svg {
+  width: 100%;
+}
+
+.div__hero-section .div__svg img {
+  position: absolute;
+  top: -36px;
+  right: -128px;
 }
 
 .div__description {
@@ -143,16 +153,6 @@ body {
   padding-bottom: 2em;
   color: #9698a6;
   text-align: left;
-}
-
-.div__svg {
-  display: none;
-  margin: 0 auto;
-}
-
-.div__svg > img {
-  position: absolute;
-  z-index: 1;
 }
 
 .div__easybank {
@@ -412,6 +412,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     height: 100vh;
+    z-index: 0;
   }
   .div__hero-section .nav__button {
     margin-bottom: 2em;
@@ -419,6 +420,15 @@ body {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+  }
+  .div__hero-section .div__svg {
+    width: 100%;
+  }
+  .div__hero-section .div__svg img {
+    position: absolute;
+    top: -9%;
+    right: 0;
+    left: 5%;
   }
   .div__description {
     width: 100%;

@@ -110,9 +110,18 @@ body {
     flex-wrap: wrap;
     height: 80vh;
     background-image: url("../images/bg-intro-desktop.svg");
-    background-size: 1100px;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: top -200px right -280px;
+    background-position: top -300px right -600px;
+
+    .div__svg {
+        width: 100%;
+        img {
+            position: absolute;
+            top: -36px;
+            right: -128px;
+        }
+    }
 }
 .div__description {
     width: 50%;
@@ -134,15 +143,7 @@ body {
         text-align: left;
     }
 }
-.div__svg {
-    display: none;
-    margin: 0 auto;
-}
-.div__svg > img {
-    position: absolute;
 
-    z-index: 1;
-}
 // why choose easybank
 .div__easybank {
     background: $lightGrayishBlue;
@@ -352,10 +353,22 @@ body {
         background-position: top -60px right 0px;
         flex-direction: column;
         height: 100vh;
+        z-index: 0;
         .nav__button {
             margin-bottom: 2em;
             margin: 0 auto;
             width: max-content;
+        }
+
+        .div__svg {
+            width: 100%;
+            img {
+                position: absolute;
+                top: -9%;
+                right: 0;
+                left: 5%;
+                // z-index: 10;
+            }
         }
     }
 
