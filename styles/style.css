@@ -102,7 +102,13 @@ body {
 }
 
 .nav__button:hover {
-  opacity: 0.8;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  opacity: 0.6;
 }
 
 .div__hero-section {

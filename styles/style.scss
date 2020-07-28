@@ -98,7 +98,10 @@ body {
     );
 
     &:hover {
-        opacity: 0.8;
+        transition-duration: 0.4s;
+        transition-timing-function: linear;
+        transform-origin: bottom;
+        opacity: 0.6;
     }
 }
 
@@ -312,12 +315,14 @@ body {
             border-radius: 5px;
             padding: 1em 0;
             z-index: 200;
+
             p {
                 color: $darkBlue;
                 line-height: 0.5em;
             }
         }
     }
+
     .mobile {
         display: flex;
     }
